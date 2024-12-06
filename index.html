@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Haven</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+    <header>
+        <div class="logo">Travel Haven</div>
+        <nav>
+            <a href="./html/">Login</a>
+            <a href="./html/signup.html" class="cta">Cadastre-se</a>
+        </nav>
+    </header>
+
+    <main>
+      
+        <section id="hero">
+            <div class="hero-text">
+                <h1>Embark on Your Next Adventure</h1>
+                <p>Discover the world's most breathtaking destinations and find your perfect home away from home.</p>
+                <a href="#destinations" class="button">Explore Destinations</a>
+            </div>
+            <div class="hero-image">
+                <img src="./imagens/cananda.jpg" alt="Santorini">
+
+            </div>
+        </section>
+
+        <section class="top-destinations">
+          <h2>Discover Top Destinations</h2>
+          <div class="destination-list">
+            <div class="destination-item" data-details="Paris is the city of lights with rich history and charm.">
+              <h3>Paris</h3>
+              <p>The city of lights awaits with its romantic charm and rich history.</p>
+              <button class="learn-more-btn">Learn More</button>
+            </div>
+        
+            <div class="destination-item" data-details="Bali offers lush landscapes, vibrant culture, and stunning beaches.">
+              <h3>Bali</h3>
+              <p>Immerse yourself in the lush landscapes and vibrant culture of Bali.</p>
+              <button class="learn-more-btn">Learn More</button>
+            </div>
+        
+            <div class="destination-item" data-details="Experience the bustling energy of New York's iconic skyline.">
+              <h3>New York</h3>
+              <p>Experience the bustling energy and iconic skyline of the Big Apple.</p>
+              <button class="learn-more-btn">Learn More</button>
+            </div>
+        
+            <div class="destination-item" data-details="Kyoto is a journey into serene temples and timeless traditions.">
+              <h3>Kyoto</h3>
+              <p>Step back in time with Kyoto's ancient temples and serene gardens.</p>
+              <button class="learn-more-btn">Learn More</button>
+            </div>
+          </div>
+        
+          <!-- Modal Structure -->
+          <div id="modal" class="hidden">
+            <div class="modal-content">
+              <span id="closeModal">&times;</span>
+              <h2 id="modalTitle">Destination Details</h2>
+              <p id="modalDetails"></p>
+            </div>
+          </div>
+        </section>
+
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <div id="map" style="height: 400px;"></div>
+        <script>
+          const map = L.map("map").setView([37.9838, 23.7275], 5); // Posição inicial
+          L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
+        
+          const destinations = [
+            { name: "Santorini", coords: [36.3932, 25.4615] },
+            { name: "Paris", coords: [48.8566, 2.3522] },
+            { name: "Bali", coords: [-8.3405, 115.092] }
+          ];
+        
+          destinations.forEach(dest => {
+            L.marker(dest.coords).addTo(map).bindPopup(`<strong>${dest.name}</strong>`);
+          });
+        </script>
+    </main>
+
+    <footer>
+        <p>© 2024 Travel Haven | Made with ❤️</p>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>
