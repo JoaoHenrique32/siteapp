@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
     <header>
         <div class="logo">Travel Haven</div>
         <nav>
-            <a href="./html/">Login</a>
-            <a href="./html/signup.html" class="cta">Cadastre-se</a>
+            <a href="./signin.html">Login</a>
+            <a href="./signup.html" class="cta">Cadastre-se</a>
         </nav>
     </header>
 
@@ -30,44 +29,31 @@
             </div>
         </section>
 
-        <section class="top-destinations">
-          <h2>Discover Top Destinations</h2>
-          <div class="destination-list">
-            <div class="destination-item" data-details="Paris is the city of lights with rich history and charm.">
-              <h3>Paris</h3>
-              <p>The city of lights awaits with its romantic charm and rich history.</p>
-              <button class="learn-more-btn">Learn More</button>
+        <section id="destinations">
+            <h2>Discover Top Destinations</h2>
+            <div class="destination-cards">
+                <div class="card">
+                    <span class="icon">🏛️</span>
+                    <h3>Paris</h3>
+                    <p>The city of lights awaits with its romantic charm and rich history.</p>
+                </div>
+                <div class="card">
+                    <span class="icon">🏝️</span>
+                    <h3>Bali</h3>
+                    <p>Immerse yourself in the lush landscapes and vibrant culture of Bali.</p>
+                </div>
+                <div class="card">
+                    <span class="icon">🏙️</span>
+                    <h3>New York</h3>
+                    <p>Experience the bustling energy and iconic skyline of the Big Apple.</p>
+                </div>
+                <div class="card">
+                    <span class="icon">🎎</span>
+                    <h3>Kyoto</h3>
+                    <p>Step back in time with Kyoto’s ancient temples and serene gardens.</p>
+                </div>
             </div>
-        
-            <div class="destination-item" data-details="Bali offers lush landscapes, vibrant culture, and stunning beaches.">
-              <h3>Bali</h3>
-              <p>Immerse yourself in the lush landscapes and vibrant culture of Bali.</p>
-              <button class="learn-more-btn">Learn More</button>
-            </div>
-        
-            <div class="destination-item" data-details="Experience the bustling energy of New York's iconic skyline.">
-              <h3>New York</h3>
-              <p>Experience the bustling energy and iconic skyline of the Big Apple.</p>
-              <button class="learn-more-btn">Learn More</button>
-            </div>
-        
-            <div class="destination-item" data-details="Kyoto is a journey into serene temples and timeless traditions.">
-              <h3>Kyoto</h3>
-              <p>Step back in time with Kyoto's ancient temples and serene gardens.</p>
-              <button class="learn-more-btn">Learn More</button>
-            </div>
-          </div>
-        
-          <!-- Modal Structure -->
-          <div id="modal" class="hidden">
-            <div class="modal-content">
-              <span id="closeModal">&times;</span>
-              <h2 id="modalTitle">Destination Details</h2>
-              <p id="modalDetails"></p>
-            </div>
-          </div>
         </section>
-
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
         <div id="map" style="height: 400px;"></div>
@@ -90,6 +76,6 @@
     <footer>
         <p>© 2024 Travel Haven | Made with ❤️</p>
     </footer>
-    <script src="./js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
