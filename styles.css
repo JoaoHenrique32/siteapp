@@ -81,88 +81,41 @@ main {
     left: 300px;
 }
 
-/* Estilo da seção de destinos */
-.top-destinations {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.destination-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.destination-item {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  background: #f9f9f9;
-  transition: transform 0.3s;
-}
-
-.destination-item:hover {
-  transform: translateY(-5px);
-}
-
-.learn-more-btn {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #1e90ff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.learn-more-btn:hover {
-  background-color: #0056b3;
-}
-
-/* Estilo do modal */
-.hidden {
-  display: none;
-}
-
-/* Estilo do modal visível */
-#modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-/* Fundo escurecido ao redor do modal */
-#modal .modal-content {
-    position: relative;
-    text-align: center;
-  }
-
-  
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  width: 80%;
-  max-width: 500px;
-  position: relative;
-}
-
-
-#closeModal {
+.destination-highlight {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    cursor: pointer;
-    font-size: 18px;
-    color: #333;
-  }
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+}
 
+.destination-highlight .rating {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0056b3;
+}
+
+#destinations {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.destination-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    max-width: 200px;
+    text-align: center;
+    margin: 10px;
+}
+
+.card .icon {
+    font-size: 2rem;
+}
 
 #map {
     margin: 40px 0;
