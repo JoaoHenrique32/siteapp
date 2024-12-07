@@ -8,31 +8,30 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="../css/signup.css" />
+    <link rel="stylesheet" href="../static/css/signup.css" />
     <title>Singup</title>
   </head>
   <body>
     <div class="container">
       <div class="card">
-        <h1>Cadastrar</h1>
+        <h1>Cadastre-se</h1>
 
         <div id="msgError"></div>
         <div id="msgSuccess"></div>
 
-        <form action="/signup" method="post">
-          <input type="text" name="username" placeholder="Nome de Usuário" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <input type="password" name="password" placeholder="Senha" required>
+        <form action="/cadastrarUsuario" id="login" method="post">
+          <label for="nome">NOME</label>
+          <input type="text" name="nome" id="nome" required placeholder="Digite seu nome"><br><br>
+          <label for="senha" id="senha">SENHA</label>
+          <input type="text" name="senha" id="senha" required placeholder="Digite sua senha"><br><br>
           <button type="submit">Cadastrar</button>
       </form>
       
 
-        <div class="justify-center">
-          <button onclick="cadastrar()">Cadastrar</button>
         </div>
       </div>
     </div>
 
-    <script src="../js/signup.js"></script>
+
   </body>
 </html>

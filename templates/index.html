@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Haven</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
 </head>
 <body>
     <header>
         <div class="logo">Travel Haven</div>
         <nav>
-            <a href="./signin.html">Login</a>
-            <a href="./signup.html" class="cta">Cadastre-se</a>
+            <a href="{{ url_for('static', filename='signin.html')}}">Login</a>
+            <a href="{{ url_for('static', filename='signup.html')}}" class="cta">Cadastre-se</a>
         </nav>
     </header>
 
@@ -24,7 +24,7 @@
                 <a href="#destinations" class="button">Explore Destinations</a>
             </div>
             <div class="hero-image">
-                <img src="./imagens/cananda.jpg" alt="Santorini">
+                <img src="{{ url_for('static', filename='cananda.jpg')}}" alt="Santorini">
 
             </div>
         </section>
@@ -62,9 +62,9 @@
           L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
         
           const destinations = [
-            { name: "Santorini", coords: [36.3932, 25.4615] },
-            { name: "Paris", coords: [48.8566, 2.3522] },
-            { name: "Bali", coords: [-8.3405, 115.092] }
+            {  },
+            {  },
+            {  }
           ];
         
           destinations.forEach(dest => {
@@ -76,6 +76,6 @@
     <footer>
         <p>© 2024 Travel Haven | Made with ❤️</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
 </body>
 </html>
